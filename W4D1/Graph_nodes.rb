@@ -1,4 +1,5 @@
 require 'set'
+require 'byebug'
 class GraphNode
     attr_accessor :val, :neighbors
     def initialize(val)
@@ -9,6 +10,7 @@ end
 
     def bfs(starting_node, target_value)
         queue = [starting_node]
+        debugger
         visited = Set.new()
           until queue.empty?
             node = queue.shift
